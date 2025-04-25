@@ -9,6 +9,7 @@
         <title>FORMULARIO</title>
     </head>
     <body class="container">
+        <jsp:include page="/nav.jsp"/>
         <h1>PROCESAMIENTO DE TIPOS</h1>
         <form name="frm" action="tipoServlet" method="POST">
             <div class="mb-3">

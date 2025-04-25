@@ -3,5 +3,7 @@
   <!-- Define Persistence Unit -->
   <persistence-unit name="my_persistence_unit">
     <class>com.hemm2025.misingresos.modelos.Tipo</class>
+    <class>com.hemm2025.misingresos.modelos.Ingresos</class>
+    <class>com.hemm2025.misingresos.modelos.Gastos</class>
   </persistence-unit>
 </persistence>

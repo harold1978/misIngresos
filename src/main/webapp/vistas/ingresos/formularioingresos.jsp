@@ -1,6 +1,6 @@
 <%-- 
-    Document   : error
-    Created on : 24 abr 2025, 11:43:10
+    Document   : formularioingresos
+    Created on : 25 abr 2025, 15:11:56
     Author     : Administrator
 --%>
 
@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <jsp:include page="/nav.jsp"/>
-        <h1>ERROR!</h1>
+        <h1>Hello World!</h1>
     </body>
 </html>

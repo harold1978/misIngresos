@@ -12,15 +12,17 @@
     </head>
     <body class="container">
         <jsp:include page="/nav.jsp"/>
-        <h2>TIPOS TRANSACION</h2>
+        <h2>INGRESO TRANSACION</h2>
         <a class="btn btn-primary btn-sm" href="tipoServlet?accion=agregar">NUEVO</a>
         <div class="table-responsive">
             <table class="table table-hover table-sm">
                 <thead >
                 <tr>
                     <th>ID</th>
-                    <th>NOMBRE</th>
-                    <th>CLASE</th>
+                    <th>DETALLE</th>
+                    <th>FECHA</th>
+                    <th>MONTO</th>
+                    <th>TIPO</th>
                     <th>COMANDOS</th>
                 </tr>
             </thead>
