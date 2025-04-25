@@ -2,18 +2,20 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"><!-- comment -->
         <title>PRINCIPAL</title>
     </head>
-    <body>
+    <body class="container">
         <h1>TIPOS TRANSACION</h1>
-        <a href="tipoServlet?accion=agregar">NUEVO</a>
-
-        <table border="1">
-            <thead>
+        <a class="btn btn-primary btn-sm" href="tipoServlet?accion=agregar">NUEVO</a>
+        <div class="table-responsive">
+            <table class="table table-hover table-sm">
+                <thead >
                 <tr>
                     <th>ID</th>
                     <th>NOMBRE</th>
@@ -36,7 +38,7 @@
 
             </tbody>
         </table>
-
-
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     </body>
 </html>

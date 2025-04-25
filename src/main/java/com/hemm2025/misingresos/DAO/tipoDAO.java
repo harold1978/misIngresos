@@ -96,7 +96,20 @@ public class tipoDAO implements crud<Tipo> {
 
     @Override
     public boolean editar(Tipo obj) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String sql1 = "update tipo set nombre=?, clase=? where id=?";
+        try {
+            con = cn.getConexion();
+            ps = con.prepareStatement(sql1);
+            ps.setString(1, obj.getNombre());
+            ps.setInt(2, obj.getClase());
+            ps.setInt(3, obj.getId());
+            
+            ps.executeUpdate();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
 }

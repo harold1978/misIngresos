@@ -74,16 +74,24 @@ public class tipoServlet extends HttpServlet {
                 request.getRequestDispatcher("vistas/tipo/formulario.jsp").forward(request, response);
                 break;
             case "eliminar":
-                int id =Integer.parseInt(request.getParameter("id"));
+                int id = Integer.parseInt(request.getParameter("id"));
                 Tipo et = dao.get(id);
-                if(et!=null){
-                    if(dao.eliminar(et)){
+                if (et != null) {
+                    if (dao.eliminar(et)) {
                         response.sendRedirect("tipoServlet?accion=listar");
-                    }else{
+                    } else {
                         response.sendRedirect("vistas/error.jsp");
                     }
                 }
 
+                break;
+            case "editar":
+                int idEditar = Integer.parseInt(request.getParameter("id"));
+                Tipo etEditado = dao.get(idEditar);
+                if (etEditado != null) {
+                    request.setAttribute("tipo", etEditado);
+                    request.getRequestDispatcher("vistas/tipo/formulario.jsp").forward(request, response);
+                }
                 break;
             default:
                 throw new AssertionError();
@@ -110,6 +118,12 @@ public class tipoServlet extends HttpServlet {
             if (dao.agregar(obj)) {
                 response.sendRedirect("tipoServlet?accion=listar");
             } else {
+                response.sendRedirect("vistas/error.jsp");
+            }
+        }else{
+            if(dao.editar(obj)){
+                response.sendRedirect("tipoServlet?accion=listar");
+            }else {
                 response.sendRedirect("vistas/error.jsp");
             }
         }
